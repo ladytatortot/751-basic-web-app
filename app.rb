@@ -19,7 +19,7 @@ class Handler
     # 'remember-me' accepts form data
     when '/remember-me'
       name = req.params["name"]
-      if name
+      if name.length >= 1
         @data[name] += 1
       end
       # 302 Found: Redirect
